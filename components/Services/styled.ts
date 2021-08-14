@@ -19,13 +19,8 @@ export const Card = styled.div`
   border-radius: 20px;
   padding: 20px;
   margin: 0 0 30px 0;
+  cursor: pointer;
   transition: all 0.5s ease;
-`;
-
-export const Title = styled.p`
-  font-size: 2em;
-  font-weight: bold;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
 `;
 
 export const CardsContainer = styled.div`
@@ -38,10 +33,9 @@ export const CardsContainer = styled.div`
 export const CardTop = styled.div`
   height: 100%;
   width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
   display: flex;
+  align-items: center;
+  flex-direction: row;
   align-items: center;
 `;
 

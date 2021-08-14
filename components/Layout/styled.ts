@@ -36,9 +36,9 @@ export const Menu = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 80px;
+  height: 70px;
 
   @media (min-width: 230px) and (max-width: 768px) {
-    height: 80px;
+    height: 60px;
   }
 `;

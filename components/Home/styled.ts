@@ -8,11 +8,6 @@ export const View = styled.div`
   justify-content: center;
 `;
 
-export const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-`;
-
 export const Logo = styled.img`
   width: 100%;
 `

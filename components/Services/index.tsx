@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import CURRENT_LANG from '../../constants/wording';
-import { BiCoffee, BiSwim, BiBed, BiPlusCircle } from 'react-icons/bi'
+import { BiCoffee, BiSwim, BiBed, BiPlusCircle } from 'react-icons/bi';
 import { FaParking } from 'react-icons/fa';
 import {
   View,
   Card,
-  Title,
   CardTop,
   CardsContainer,
   CardBottom,
   Icon,
 } from './styled';
+import { Title, CardTitle } from '../Base/Texts/styled';
 
 const Services = () => {
   const [openToggle, setOpenToggle] = useState(null);
@@ -19,31 +19,31 @@ const Services = () => {
       id: 1,
       title: CURRENT_LANG.services.breakfast.title,
       description: CURRENT_LANG.services.breakfast.description,
-      icon: <BiCoffee size="25px"/>,
+      icon: <BiCoffee size="25px" />,
     },
     {
       id: 2,
       title: CURRENT_LANG.services.pool.title,
       description: CURRENT_LANG.services.pool.description,
-      icon: <BiSwim size="25px"/>,
+      icon: <BiSwim size="25px" />,
     },
     {
       id: 3,
       title: CURRENT_LANG.services.rooms.title,
       description: CURRENT_LANG.services.rooms.description,
-      icon: <BiBed size="25px"/>,
+      icon: <BiBed size="25px" />,
     },
     {
       id: 4,
       title: CURRENT_LANG.services.garage.title,
       description: CURRENT_LANG.services.garage.description,
-      icon: <FaParking size="25px"/>,
+      icon: <FaParking size="25px" />,
     },
     {
       id: 5,
       title: CURRENT_LANG.services.more.title,
       description: CURRENT_LANG.services.more.description,
-      icon: <BiPlusCircle size="25px"/>,
+      icon: <BiPlusCircle size="25px" />,
     },
   ]);
 
@@ -56,13 +56,14 @@ const Services = () => {
             key={service.id}
             onClick={() => setOpenToggle(index)}
             openCard={openToggle === index}
-          > 
+          >
             <CardTop>
-              <Icon>
-                {service?.icon || null}
-              </Icon>
-              {service.title}</CardTop>
-            <CardBottom openCard={openToggle === index}>{service.description}</CardBottom>
+              <Icon>{service?.icon}</Icon>
+              <CardTitle>{service.title}</CardTitle>
+            </CardTop>
+            <CardBottom openCard={openToggle === index}>
+              {service.description}
+            </CardBottom>
           </Card>
         ))}
       </CardsContainer>

@@ -3,13 +3,39 @@ import styled from '@emotion/styled';
 export const View = styled.div`
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  max-width: 500px;
   padding: 15px;
 `;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  gap: 15px;
+`
+
+export const ContactButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: ${({ theme }) => theme.color.shadow};
+  color: ${({ theme }) => theme.color.text};
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.color.textAlt};
+    background-color: ${({ theme, name }) => theme.color[name]};
+  }
+`
 
 export const Input = styled.input`
   all: unset;
