@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Logo, Header, Menu } from './styled';
 import { isMobile } from 'react-device-detect';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
@@ -9,7 +9,7 @@ const NavBar = ({ children }) => {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <Header>
+      <Header openMenu={menu}>
         <Menu
           onClick={() => {
             setMenu(!menu);
@@ -21,10 +21,10 @@ const NavBar = ({ children }) => {
             <HiOutlineMenuAlt1 size="30" color="" />
           )}
         </Menu>
-        {isMobile && menu ? null : <Logo src="../images/logo_color.svg" />}
+        <Logo src="../images/logo_color.svg" />
       </Header>
       <SideBarMenu openMenu={menu} />
-      <View openMenu={menu}>{children}</View>
+      <View openMenu={menu} onClick={() => setMenu(false)}>{children}</View>
     </>
   );
 };

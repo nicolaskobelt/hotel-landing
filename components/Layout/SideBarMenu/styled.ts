@@ -2,19 +2,18 @@ import styled from '@emotion/styled';
 
 export const Sidebar = styled.div`
   position: fixed;
-  top: 25px;
-  left: ${({ openMenu }) => openMenu ? '20px' : '-100%'};
-  width: 250px;
-  height: 90%;
-  background-color: ${({ theme }) => theme.color.background};
-  box-shadow: ${({ theme }) => theme.color.shadow};
-  border-radius: 25px;
+  top: ${({ openMenu }) => openMenu ? '90px' : '-100%'};
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: ${({ theme }) => theme.color.backgroundTransparent};
+  backdrop-filter: blur(5px);
+  border-radius: 0 0 25px 25px;
   transition: 500ms;
 `;
 
 export const SideBarContainer = styled.div`
   width: 250px;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +22,7 @@ export const SideBarContainer = styled.div`
 export const Items = styled.div`
   height: 300px;
   width: 100%;
-  margin-top: 100px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
