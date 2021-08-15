@@ -16,7 +16,6 @@ export const ButtonsContainer = styled.div`
   flex-wrap: wrap;
   width: 90%;
   justify-content: center;
-  gap: 15px;
 `
 
 export const ContactButton = styled.a`
@@ -26,6 +25,7 @@ export const ContactButton = styled.a`
   height: 100px;
   width: 100px;
   border-radius: 20px;
+  margin: 0 15px 15px 0;
   cursor: pointer;
   box-shadow: ${({ theme }) => theme.color.shadow};
   color: ${({ theme }) => theme.color.text};
