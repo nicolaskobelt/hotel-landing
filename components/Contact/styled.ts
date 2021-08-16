@@ -64,3 +64,11 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.color.placeholder};
   }
 `;
+
+export const Map = styled.iframe`
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  border: none;
+  border-radius: 15px;
+`

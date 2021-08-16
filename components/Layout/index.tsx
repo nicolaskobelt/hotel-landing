@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Logo, Header, Menu } from './styled';
-import { isMobile } from 'react-device-detect';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { CgClose } from 'react-icons/cg';
 import SideBarMenu from './SideBarMenu';

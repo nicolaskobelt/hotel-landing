@@ -6,12 +6,6 @@ const Routes = [
     icon: 'home',
   },
   {
-    id: 'contact',
-    name: 'Contacto',
-    route: '/contacto',
-    icon: 'contact',
-  },
-  {
     id: 'rooms',
     name: 'Habitaciones',
     route: '/habitaciones',
@@ -22,6 +16,18 @@ const Routes = [
     name: 'Servicios',
     route: '/servicios',
     icon: 'services',
+  },
+  {
+    id: 'contact',
+    name: 'Contacto',
+    route: '/contacto',
+    icon: 'contact',
+  },
+  {
+    id: 'location',
+    name: 'Ubicación',
+    route: '/ubicacion',
+    icon: 'location',
   },
   {
     id: 'spa',

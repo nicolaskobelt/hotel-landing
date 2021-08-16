@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import CURRENT_LANG from '../../constants/wording';
 import { BiCoffee, BiSwim, BiBed, BiPlusCircle } from 'react-icons/bi';
 import { FaParking } from 'react-icons/fa';
+import { CSSTransition } from 'react-transition-group';
 import {
   View,
   Card,
   CardTop,
   CardsContainer,
-  CardBottom,
+  Container,
+  OutterCard,
+  InnerCard,
+  Images,
+  CardText,
   Icon,
 } from './styled';
 import { Title, CardTitle } from '../Base/Texts/styled';
@@ -49,24 +54,40 @@ const Services = () => {
 
   return (
     <View>
+      <a name="services" />
       <Title>Servicios</Title>
-      <CardsContainer>
-        {services.map((service, index) => (
-          <Card
-            key={service.id}
-            onClick={() => setOpenToggle(index)}
-            openCard={openToggle === index}
-          >
-            <CardTop>
-              <Icon>{service?.icon}</Icon>
-              <CardTitle>{service.title}</CardTitle>
-            </CardTop>
-            <CardBottom openCard={openToggle === index}>
-              {service.description}
-            </CardBottom>
-          </Card>
-        ))}
-      </CardsContainer>
+      {services.map((service, index) => (
+        <OutterCard key={service.id}>
+          <InnerCard>
+            <Card
+              onClick={() => setOpenToggle(index)}
+              openCard={openToggle === index}
+            >
+              <CardTop>
+                <Icon>{service?.icon}</Icon>
+                <CardTitle>{service.title}</CardTitle>
+              </CardTop>
+              <CardText openCard={openToggle === index}>
+                {service.description}
+              </CardText>
+            </Card>
+          </InnerCard>
+          {/* <Container openCard={openToggle === index}>
+            <Images
+              openCard={openToggle === index}
+              src="../images/breakfast_1.jpg"
+            />
+            <Images
+              openCard={openToggle === index}
+              src="../images/breakfast_2.jpg"
+            />
+            <Images
+              openCard={openToggle === index}
+              src="../images/breakfast_3.jpg"
+            />
+          </Container> */}
+        </OutterCard>
+      ))}
     </View>
   );
 };

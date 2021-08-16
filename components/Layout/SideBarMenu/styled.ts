@@ -20,7 +20,7 @@ export const SideBarContainer = styled.div`
 `;
 
 export const Items = styled.div`
-  height: 300px;
+  height: auto;
   width: 100%;
   margin-bottom: 50px;
   display: flex;

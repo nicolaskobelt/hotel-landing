@@ -1,15 +1,17 @@
 import React from 'react';
 import { BiHomeHeart, BiPhone, BiDonateHeart, BiSpa, BiBed } from 'react-icons/bi';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { Sidebar, SideBarContainer, Item, Items, Text, Icon } from './styled';
 import Routes from '../../../configs/routes';
 
 const SideBarMenu = ({ openMenu }) => {
   const icons = {
     home: <BiHomeHeart size="30px" />,
-    contact: <BiPhone size="30px" />,
-    services: <BiDonateHeart size="30px" />,
-    spa: <BiSpa size="30px" />,
     rooms: <BiBed size="30px" />,
+    services: <BiDonateHeart size="30px" />,
+    contact: <BiPhone size="30px" />,
+    location: <HiOutlineLocationMarker size="30px" />,
+    spa: <BiSpa size="30px" />,
   }
 
   return (

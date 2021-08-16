@@ -2,6 +2,7 @@ const base = {
   color: {
     background: 'rgb(247, 247, 247)',
     backgroundTransparent: 'rgba(247, 247, 247, 0.8)',
+    footerBackground: 'rgb(46, 46, 46)',
     text: 'rgb(33, 33, 33)',
     textAlt: 'rgb(247, 247, 247)',
     shadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
