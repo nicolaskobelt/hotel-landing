@@ -44,31 +44,48 @@ const Rates = ({ translate }) => {
     return <View>Cargando</View>;
   }
 
+  if (!rates) {
+    return (
+      <View>
+        <Title>{translate('rates.title')}</Title>
+        <Period>Tarifas no disponibles por el momento</Period>
+      </View>
+    );
+  }
+
   return (
     <View>
       <Title>{translate('rates.title')}</Title>
       <RatesContainer>
-      <PeriodContainer>
-        <Period>{rates[0][0]} - {rates[0][1]}</Period>
-        <PeriodDetail>{rates[0][2]} al {rates[0][3]}</PeriodDetail>
-        {rates[1].map((item, index) => (
-          <Room key={index}>
-            <RoomName>{item}</RoomName>
-            <RoomPrice>{`$ ${rates[2][index]}.`}</RoomPrice>
-          </Room>
-        ))}
-      </PeriodContainer>
-      <Spacer />
-      <PeriodContainer>
-      <Period>{rates[4][0]} - {rates[4][1]}</Period>
-        <PeriodDetail>{rates[4][2]} al {rates[4][3]}</PeriodDetail>
-        {rates[5].map((item, index) => (
-          <Room key={index}>
-            <RoomName>{item}</RoomName>
-            <RoomPrice>{`$ ${rates[6][index]}.`}</RoomPrice>
-          </Room>
-        ))}
-      </PeriodContainer>
+        <PeriodContainer>
+          <Period>
+            {rates[0][0]} - {rates[0][1]}
+          </Period>
+          <PeriodDetail>
+            {rates[0][2]} al {rates[0][3]}
+          </PeriodDetail>
+          {rates[1].map((item, index) => (
+            <Room key={index}>
+              <RoomName>{item}</RoomName>
+              <RoomPrice>{`$ ${rates[2][index]}.`}</RoomPrice>
+            </Room>
+          ))}
+        </PeriodContainer>
+        <Spacer />
+        <PeriodContainer>
+          <Period>
+            {rates[4][0]} - {rates[4][1]}
+          </Period>
+          <PeriodDetail>
+            {rates[4][2]} al {rates[4][3]}
+          </PeriodDetail>
+          {rates[5].map((item, index) => (
+            <Room key={index}>
+              <RoomName>{item}</RoomName>
+              <RoomPrice>{`$ ${rates[6][index]}.`}</RoomPrice>
+            </Room>
+          ))}
+        </PeriodContainer>
       </RatesContainer>
     </View>
   );
