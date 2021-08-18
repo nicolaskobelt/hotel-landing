@@ -12,8 +12,8 @@ const HomePage = () => {
     <>
       <Home />
       <Services translate={t} />
-      <Contact />
       <Rates translate={t} />
+      <Contact />
       <Footer />
     </>
   )
