@@ -1,0 +1,30 @@
+{
+  "title": "Hotel Casablanca",
+  "address": "El Nogal 33, Santa Rosa de Calamuchita, Cordoba, Argentina",
+  "services": {
+    "title": "Servicios",
+    "breakfast": {
+      "title": "Desayuno Buffet",
+      "description": "El más completo desayuno para que comiences tus mañanas de la mejor forma"
+    },
+    "pool": {
+      "title": "Piscina Climatizada y Cubierta",
+      "description": "Contamos con la mejor pileta climatizada y cubierta para los meses de Marzo a Noviembre y descubierta desde Diciembre a Febrero"
+    },
+    "rooms": {
+      "title": "Habitaciones",
+      "description": "El Hotel Casablanca pone a tu disposición las habitaciones ideales para disfrutar de tu estancia en Santa Rosa de Calamuchita. Estas habitaciones están equipadas TV LED, aire acondicionado, caja fuerte y mas."
+    },
+    "parking": {
+      "title": "Cochera Cubierta",
+      "description": "Podras despreocuparte del estacionamiento del tu vehiculo, contamos con cocheras cubiertas y descubiertas. Puede variar su disponibilidad"
+    },
+    "more": {
+      "title": "Más Servicios",
+      "description": "WiFi, Servicio de Mucamas, SPA Urbano"
+    }
+  },
+  "rates": {
+    "title": "Tarifas"
+  }
+}

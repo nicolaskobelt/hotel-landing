@@ -6,7 +6,6 @@ import { useTheme } from '@emotion/react';
 
 const Footer = () => {
   const theme = useTheme();
-  console.log(theme);
   const otas = [
     {
       id: 'tripadvisor',

@@ -25,24 +25,34 @@ export const Card = styled.div`
   flex-direction: column;
   box-shadow: ${({ theme }) => theme.color.shadow};
   border-radius: 20px;
-  padding: 20px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: all 0.5s ease;
 `;
 
 export const CardTop = styled.div`
-  height: auto;
-  width: 100%;
-  margin-top: 10px;
   display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  margin: 0;
+  color: ${({ openCard, theme }) => (openCard ? theme.color.textAlt : theme.color.text)};
+  background-color: ${({ openCard, theme }) => (openCard ? theme.color.hover : 'none')};
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   flex-direction: row;
+  transition: all 0.5s ease;
 `;
 
 export const CardText = styled.div`
   display: ${({ openCard }) => (openCard ? 'flex' : 'none')};
   height: 100%;
   width: 100%;
+  padding: 5px 20px;
   margin-top: 10px;
   transition: all 1s ease;
 `;

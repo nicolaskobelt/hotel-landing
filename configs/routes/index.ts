@@ -24,10 +24,10 @@ const Routes = [
     icon: 'contact',
   },
   {
-    id: 'location',
-    name: 'Ubicación',
-    route: '/ubicacion',
-    icon: 'location',
+    id: 'rates',
+    name: 'Tarifas',
+    route: '/rates',
+    icon: 'rates',
   },
   {
     id: 'spa',

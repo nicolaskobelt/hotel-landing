@@ -7,6 +7,7 @@ const base = {
     textAlt: 'rgb(247, 247, 247)',
     shadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
     hover: 'rgb(25, 178, 169)',
+    ligthHover: 'rgba(25, 178, 169, 0.5)',
     red: 'rgb(145, 15, 6)',
     placeholder: 'rgba(25, 178, 169, 0.5)',
     whatsapp: 'rgb(37 211 102)',

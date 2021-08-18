@@ -2,10 +2,10 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@emotion/react'
 import { THEMES } from '../configs/theme/index';
+import { appWithTranslation } from 'next-i18next';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-;
   return (
     <ThemeProvider theme={THEMES.BASE}>
       <Head>
@@ -21,4 +21,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   );
 }
-export default MyApp;
+export default appWithTranslation(MyApp);

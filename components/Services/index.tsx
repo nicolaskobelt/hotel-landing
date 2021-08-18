@@ -16,38 +16,34 @@ import {
   Icon,
 } from './styled';
 import { Title, CardTitle } from '../Base/Texts/styled';
+import { useRatesData } from '../../hooks';
 
-const Services = () => {
+const Services = ({ translate }) => {
   const [openToggle, setOpenToggle] = useState(null);
   const [services, setServices] = React.useState([
     {
       id: 1,
-      title: CURRENT_LANG.services.breakfast.title,
-      description: CURRENT_LANG.services.breakfast.description,
+      translate: 'breakfast',
       icon: <BiCoffee size="25px" />,
     },
     {
       id: 2,
-      title: CURRENT_LANG.services.pool.title,
-      description: CURRENT_LANG.services.pool.description,
+      translate: 'pool',
       icon: <BiSwim size="25px" />,
     },
     {
       id: 3,
-      title: CURRENT_LANG.services.rooms.title,
-      description: CURRENT_LANG.services.rooms.description,
+      translate: 'rooms',
       icon: <BiBed size="25px" />,
     },
     {
       id: 4,
-      title: CURRENT_LANG.services.garage.title,
-      description: CURRENT_LANG.services.garage.description,
+      translate: 'parking',
       icon: <FaParking size="25px" />,
     },
     {
       id: 5,
-      title: CURRENT_LANG.services.more.title,
-      description: CURRENT_LANG.services.more.description,
+      translate: 'more',
       icon: <BiPlusCircle size="25px" />,
     },
   ]);
@@ -55,7 +51,7 @@ const Services = () => {
   return (
     <View>
       <a name="services" />
-      <Title>Servicios</Title>
+      <Title>{translate('services.title')}</Title>
       {services.map((service, index) => (
         <OutterCard key={service.id}>
           <InnerCard>
@@ -63,12 +59,12 @@ const Services = () => {
               onClick={() => setOpenToggle(index)}
               openCard={openToggle === index}
             >
-              <CardTop>
+              <CardTop openCard={openToggle === index}>
                 <Icon>{service?.icon}</Icon>
-                <CardTitle>{service.title}</CardTitle>
+                {translate(`services.${service.translate}.title`)}
               </CardTop>
               <CardText openCard={openToggle === index}>
-                {service.description}
+                {translate(`services.${service.translate}.description`)}
               </CardText>
             </Card>
           </InnerCard>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Title, Image } from './styled';
+import { Image } from './styled';
 import NavBar from '../Layout';
 
 const Home = () => {
