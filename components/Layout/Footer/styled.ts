@@ -8,6 +8,7 @@ export const View = styled.div`
   align-items: center;
   margin: 20px 0 0 0;
   background-color: ${({ theme }) => theme.color.footerBackground};
+  border-radius: 25px 25px 0 0;
 `;
 
 export const OtasContainer = styled.div`
