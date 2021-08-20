@@ -9,6 +9,7 @@ import {
   PeriodDetail,
   Spacer,
   RatesContainer,
+  PeriodDisclaimer,
 } from './styled';
 import { Title } from '../Base/Texts/styled';
 import { useEffect } from 'react';
@@ -38,17 +39,19 @@ const Rates = ({ translate }) => {
     getRates();
   }, [rates, path]);
 
-  console.log(rates);
-
   if (loading) {
-    return <View>Cargando</View>;
+    return (
+      <View>
+        <Title>{translate('rates.loading')}</Title>
+      </View>
+    );
   }
 
   if (!rates) {
     return (
       <View>
         <Title>{translate('rates.title')}</Title>
-        <Period>Tarifas no disponibles por el momento</Period>
+        <Period>{translate('rates.unavailable')}</Period>
       </View>
     );
   }
@@ -59,32 +62,42 @@ const Rates = ({ translate }) => {
       <RatesContainer>
         <PeriodContainer>
           <Period>
-            {rates[0][0]} - {rates[0][1]}
+            {rates[0].length > 1
+              ? `${rates[0][0]} - ${rates[0][1]}`
+              : rates[0][0]}
           </Period>
-          <PeriodDetail>
-            {rates[0][2]} al {rates[0][3]}
-          </PeriodDetail>
+          {rates[0].length > 1 && (
+            <PeriodDetail>
+              {rates[0][2]} al {rates[0][3]}
+            </PeriodDetail>
+          )}
           {rates[1].map((item, index) => (
             <Room key={index}>
               <RoomName>{item}</RoomName>
               <RoomPrice>{`$ ${rates[2][index]}.`}</RoomPrice>
             </Room>
           ))}
+          <PeriodDisclaimer>{rates[3][0]}</PeriodDisclaimer>
         </PeriodContainer>
         <Spacer />
         <PeriodContainer>
           <Period>
-            {rates[4][0]} - {rates[4][1]}
+            {rates[4].length > 1
+              ? `${rates[4][0]} - ${rates[4][1]}`
+              : rates[4][0]}
           </Period>
-          <PeriodDetail>
-            {rates[4][2]} al {rates[4][3]}
-          </PeriodDetail>
+          {rates[4].length > 1 && (
+            <PeriodDetail>
+              {rates[4][2]} al {rates[4][3]}
+            </PeriodDetail>
+          )}
           {rates[5].map((item, index) => (
             <Room key={index}>
               <RoomName>{item}</RoomName>
               <RoomPrice>{`$ ${rates[6][index]}.`}</RoomPrice>
             </Room>
           ))}
+          <PeriodDisclaimer>{rates[7][0]}</PeriodDisclaimer>
         </PeriodContainer>
       </RatesContainer>
     </View>

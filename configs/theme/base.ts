@@ -1,11 +1,11 @@
 const base = {
   color: {
-    background: 'rgb(247, 247, 247)',
+    background: '#f2f2f2',
     backgroundTransparent: 'rgba(247, 247, 247, 0.8)',
     footerBackground: 'rgb(46, 46, 46)',
     text: 'rgb(33, 33, 33)',
     textAlt: 'rgb(247, 247, 247)',
-    shadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
+    shadow: '5px 5px 10px #b6b6b6, -5px -5px 10px #ffffff',
     hover: 'rgb(25, 178, 169)',
     ligthHover: 'rgba(25, 178, 169, 0.5)',
     red: 'rgb(145, 15, 6)',
@@ -14,11 +14,16 @@ const base = {
     facebook: 'rgb(66 103 178)',
     instagram: 'rgb(193,53,132)',
     email: 'rgb(247,119,55)',
+    cards: {
+      first: '#cecece',
+      second: '#ffffff'
+    }
   },
 
   fontFamily: {
-    primary: "'Ubuntu', sans-serif",
-    secondary: "'Fira Sans', sans-serif",
+    primary: "'Epilogue', sans-serif",
+    secondary: "'Montserrat', sans-serif",
+    tertiary: "'Roboto', sans-serif",
   },
 
  

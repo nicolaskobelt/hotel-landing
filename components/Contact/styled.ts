@@ -16,7 +16,7 @@ export const ButtonsContainer = styled.div`
   flex-wrap: wrap;
   width: 90%;
   justify-content: center;
-`
+`;
 
 export const ContactButton = styled.a`
   display: flex;
@@ -27,15 +27,16 @@ export const ContactButton = styled.a`
   border-radius: 20px;
   margin: 0 15px 15px 0;
   cursor: pointer;
-  box-shadow: ${({ theme }) => theme.color.shadow};
   color: ${({ theme }) => theme.color.text};
   transition: all 0.3s ease;
+  background: ${({ theme }) => theme.color.background};
+  box-shadow: ${({ theme }) => theme.color.shadow};
 
   &:hover {
     color: ${({ theme }) => theme.color.textAlt};
     background-color: ${({ theme, name }) => theme.color[name]};
   }
-`
+`;
 
 export const Input = styled.input`
   all: unset;
@@ -44,8 +45,7 @@ export const Input = styled.input`
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
-  color: ${({ error, theme }) =>
-    error ? theme.color.red : theme.color.text};
+  color: ${({ error, theme }) => (error ? theme.color.red : theme.color.text)};
   border: thin solid ${({ theme }) => theme.color.text};
   border-radius: 12px;
   font-family: ${({ theme }) => theme.fontFamily.secondary};
@@ -71,4 +71,5 @@ export const Map = styled.iframe`
   height: 400px;
   border: none;
   border-radius: 15px;
-`
+  box-shadow: ${({ theme }) => theme.color.shadow};
+`;

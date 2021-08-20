@@ -10,6 +10,7 @@ export const Sidebar = styled.div`
   backdrop-filter: blur(5px);
   border-radius: 0 0 25px 25px;
   transition: 500ms;
+  z-index: 2;
 `;
 
 export const SideBarContainer = styled.div`

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Logo, Header, Menu } from './styled';
-import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import { BiMenu } from 'react-icons/bi';
 import { CgClose } from 'react-icons/cg';
 import SideBarMenu from './SideBarMenu';
 
@@ -17,7 +17,7 @@ const NavBar = ({ children }) => {
           {menu ? (
             <CgClose size="30" color="" />
           ) : (
-            <HiOutlineMenuAlt1 size="30" color="" />
+            <BiMenu size="30" color="" />
           )}
         </Menu>
         <Logo src="../images/logo_color.svg" />

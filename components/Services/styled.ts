@@ -19,15 +19,17 @@ export const InnerCard = styled.div`
 `
 
 export const Card = styled.div`
-  height: ${({ openCard }) => (openCard ? '200px' : '100px')};
+  height: ${({ openCard }) => (openCard ? 200 : 90)}px;
   width: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: ${({ theme }) => theme.color.shadow};
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   cursor: pointer;
   transition: all 0.5s ease;
+  background: ${({ theme }) => theme.color.background};
+  box-shadow: ${({ theme }) => theme.color.shadow};
 `;
 
 export const CardTop = styled.div`
@@ -82,5 +84,4 @@ export const Images = styled.img`
 export const Icon = styled.div`
   width: 20px;
   margin-right: 20px;
-`
-
+`;

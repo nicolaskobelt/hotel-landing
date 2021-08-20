@@ -5,4 +5,5 @@ export const Title = styled.p`
   font-weight: bold;
   font-family: ${({ theme }) => theme.fontFamily.primary};
   color: ${({ theme, color }) => color ? color : theme.color.text};
+  z-index: 1;
 `;

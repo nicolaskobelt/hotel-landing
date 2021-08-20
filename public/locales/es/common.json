@@ -25,6 +25,8 @@
     }
   },
   "rates": {
-    "title": "Tarifas"
+    "title": "Tarifas",
+    "loading": "Cargando tarifas...",
+    "unavailable": "Tarifas no disponibles por el momento."
   }
 }

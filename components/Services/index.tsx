@@ -68,20 +68,6 @@ const Services = ({ translate }) => {
               </CardText>
             </Card>
           </InnerCard>
-          {/* <Container openCard={openToggle === index}>
-            <Images
-              openCard={openToggle === index}
-              src="../images/breakfast_1.jpg"
-            />
-            <Images
-              openCard={openToggle === index}
-              src="../images/breakfast_2.jpg"
-            />
-            <Images
-              openCard={openToggle === index}
-              src="../images/breakfast_3.jpg"
-            />
-          </Container> */}
         </OutterCard>
       ))}
     </View>

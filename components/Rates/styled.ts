@@ -28,7 +28,12 @@ export const PeriodContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 15px;
   max-width: 500px;
+  border-radius: 20px;
+  margin-bottom: 35px;
+  background: ${({ theme }) => theme.color.background};
+  box-shadow: 5px 5px 10px #b6b6b6, -5px -5px 10px #ffffff;
 `;
 
 export const Period = styled.p`
@@ -41,9 +46,16 @@ export const Period = styled.p`
 export const PeriodDetail = styled.p`
   font-size: 12px;
   font-style: italic;
-  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
   margin: 0 0 15px 0;
 `;
+
+export const PeriodDisclaimer = styled.p`
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
+`
 
 export const Room = styled.div`
   display: flex;
@@ -75,10 +87,10 @@ export const RoomPrice = styled.div`
 
 //Temporal
 export const Spacer = styled.div`
-  width: 35px;
+  width: 20px;
 
   @media (min-width: 230px) and (max-width: 768px) {
-    height: 35px;
+    height: 20px;
   }
   
 `;
