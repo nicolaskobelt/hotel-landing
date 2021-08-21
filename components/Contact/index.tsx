@@ -34,7 +34,7 @@ const Contact = () => {
   ];
 
   return (
-    <View>
+    <View id="contact">
       <Title>Contacto</Title>
       <ButtonsContainer>
         {social.map((item) => (

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-scroll';
 
 export const Sidebar = styled.div`
   position: fixed;
@@ -29,7 +30,7 @@ export const Items = styled.div`
   align-items: center;
 `;
 
-export const Item = styled.div`
+export const Item = styled(Link)`
   height: 60px;
   width: 100%;
   display: flex;

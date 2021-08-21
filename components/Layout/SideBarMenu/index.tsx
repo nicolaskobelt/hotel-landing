@@ -1,5 +1,12 @@
 import React from 'react';
-import { BiHomeHeart, BiPhone, BiDollarCircle, BiDonateHeart, BiSpa, BiBed } from 'react-icons/bi';
+import {
+  BiHomeHeart,
+  BiPhone,
+  BiDollarCircle,
+  BiDonateHeart,
+  BiSpa,
+  BiBed,
+} from 'react-icons/bi';
 import { Sidebar, SideBarContainer, Item, Items, Text, Icon } from './styled';
 import Routes from '../../../configs/routes';
 
@@ -11,20 +18,24 @@ const SideBarMenu = ({ openMenu }) => {
     contact: <BiPhone size="30px" />,
     rates: <BiDollarCircle size="30px" />,
     spa: <BiSpa size="30px" />,
-  }
+  };
 
   return (
     <SideBarContainer>
       <Sidebar openMenu={openMenu}>
         <Items>
-        {Routes.map((route) => (
-          <Item key={route.id} >
-            <Icon>
-              {icons[route.icon]}
-            </Icon>
-            <Text>{route.name}</Text>
-          </Item>
-        ))}
+          {Routes.map((route) => (
+            <Item
+              key={route.id}
+              to={route.id}
+              activeClass="active"
+              spy={true}
+              smooth={true}
+            >
+              <Icon>{icons[route.icon]}</Icon>
+              <Text>{route.name}</Text>
+            </Item>
+          ))}
         </Items>
       </Sidebar>
     </SideBarContainer>

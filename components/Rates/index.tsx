@@ -14,6 +14,7 @@ import {
 import { Title } from '../Base/Texts/styled';
 import { useEffect } from 'react';
 import axios from 'axios';
+import Loader from '../Base/Loader';
 
 const Rates = ({ translate }) => {
   const [rates, setRates] = useState(null);
@@ -43,6 +44,7 @@ const Rates = ({ translate }) => {
     return (
       <View>
         <Title>{translate('rates.loading')}</Title>
+        <Loader />
       </View>
     );
   }
@@ -57,7 +59,7 @@ const Rates = ({ translate }) => {
   }
 
   return (
-    <View>
+    <View id="rates">
       <Title>{translate('rates.title')}</Title>
       <RatesContainer>
         <PeriodContainer>

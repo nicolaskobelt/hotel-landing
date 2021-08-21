@@ -17,6 +17,7 @@ import {
 } from './styled';
 import { Title, CardTitle } from '../Base/Texts/styled';
 import { useRatesData } from '../../hooks';
+import Loader from '../Base/Loader';
 
 const Services = ({ translate }) => {
   const [openToggle, setOpenToggle] = useState(null);
@@ -49,8 +50,7 @@ const Services = ({ translate }) => {
   ]);
 
   return (
-    <View>
-      <a name="services" />
+    <View id="services">
       <Title>{translate('services.title')}</Title>
       {services.map((service, index) => (
         <OutterCard key={service.id}>
