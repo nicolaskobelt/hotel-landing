@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:title"
-          content="Hotel Casablanca en el Valle de Calamuchita."
+          content={`Casablanca Hotel & Spa en el Valle de Calamuchita.`}
         />
         <meta
           property="og:description"
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta property="og:url" content="https://hotelcasablancacba.com.ar/" />
         <meta property="og:type" content="website" />
-        <title>Hotel Casablanca</title>
+        <title>${`Casablanca Hotel & Spa`}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
