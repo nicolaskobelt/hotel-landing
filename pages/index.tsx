@@ -5,6 +5,7 @@ import Services from '../components/Services';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Rates from '../components/Rates';
+import ImageGallery from '../components/Gallery';
 
 const HomePage = () => {
   const { t } = useTranslation('common')
@@ -12,6 +13,7 @@ const HomePage = () => {
     <>
       <Home />
       <Services translate={t} />
+      <ImageGallery />
       <Rates translate={t} />
       <Contact />
       <Footer />

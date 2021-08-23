@@ -30,6 +30,22 @@ export const Items = styled.div`
   align-items: center;
 `;
 
+export const ItemHref = styled.a`
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  color: ${({ theme }) => theme.color.text};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.hover};
+    color: ${({ theme }) => theme.color.textAlt};
+  }
+`
+
 export const Item = styled(Link)`
   height: 60px;
   width: 100%;

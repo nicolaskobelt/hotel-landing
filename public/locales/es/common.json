@@ -5,23 +5,27 @@
     "title": "Servicios",
     "breakfast": {
       "title": "Desayuno Buffet",
-      "description": "El más completo desayuno para que comiences tus mañanas de la mejor forma"
+      "description": "Porque sabemos que la primera comida del día es la más importante, es que te proponemos un buen desayuno con todos los nutrientes que necesitas para tu recorrido por nuestra ciudad y los alrededores."
     },
     "pool": {
       "title": "Piscina Climatizada y Cubierta",
-      "description": "Contamos con la mejor pileta climatizada y cubierta para los meses de Marzo a Noviembre y descubierta desde Diciembre a Febrero"
+      "description": "Contamos con la mejor pileta climatizada y cubierta para los meses de Marzo a Noviembre y descubierta desde Diciembre a Febrero."
     },
     "rooms": {
       "title": "Habitaciones",
-      "description": "El Hotel Casablanca pone a tu disposición las habitaciones ideales para disfrutar de tu estancia en Santa Rosa de Calamuchita. Estas habitaciones están equipadas TV LED, aire acondicionado, caja fuerte y mas."
+      "description": "El Hotel Casablanca pone a tu disposición las habitaciones ideales para disfrutar de tu estancia en Santa Rosa de Calamuchita. Estas habitaciones están equipadas TV LED, aire acondicionado, caja fuerte y más."
+    },
+    "spa": {  
+      "title": "OASIS Spa Urbano",
+      "description": "Servicio de SPA en un ambiente único, con personal capacitado que podrá brindarte un momento de placer y desconexión, según el programa que elijas, siempre finalizando con una infusión y reencontrarte con tus sentidos."
     },
     "parking": {
       "title": "Cochera Cubierta",
-      "description": "Podras despreocuparte del estacionamiento del tu vehiculo, contamos con cocheras cubiertas y descubiertas. Puede variar su disponibilidad"
+      "description": "Podras despreocuparte del estacionamiento del tu vehiculo, contamos con cocheras cubiertas y descubiertas. Puede variar su disponibilidad."
     },
     "more": {
       "title": "Más Servicios",
-      "description": "WiFi, Servicio de Mucamas, SPA Urbano"
+      "description": "WiFi gratis en todo el establecimiento, servicio de Cafe durante todo el día."
     }
   },
   "rates": {

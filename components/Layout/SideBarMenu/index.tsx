@@ -5,16 +5,24 @@ import {
   BiDollarCircle,
   BiDonateHeart,
   BiSpa,
-  BiBed,
+  BiPhotoAlbum,
 } from 'react-icons/bi';
-import { Sidebar, SideBarContainer, Item, Items, Text, Icon } from './styled';
+import {
+  Sidebar,
+  SideBarContainer,
+  Item,
+  Items,
+  Text,
+  Icon,
+  ItemHref,
+} from './styled';
 import Routes from '../../../configs/routes';
 
 const SideBarMenu = ({ openMenu }) => {
   const icons = {
     home: <BiHomeHeart size="30px" />,
-    rooms: <BiBed size="30px" />,
     services: <BiDonateHeart size="30px" />,
+    photos: <BiPhotoAlbum size="30px" />,
     contact: <BiPhone size="30px" />,
     rates: <BiDollarCircle size="30px" />,
     spa: <BiSpa size="30px" />,
@@ -36,6 +44,10 @@ const SideBarMenu = ({ openMenu }) => {
               <Text>{route.name}</Text>
             </Item>
           ))}
+          <ItemHref href="https://www.instagram.com/oasis.natacionyspa/" target="_blank">
+              <Icon>{icons.spa}</Icon>
+              <Text>OASIS Spa Urbano</Text>
+          </ItemHref>
         </Items>
       </Sidebar>
     </SideBarContainer>
