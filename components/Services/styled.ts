@@ -9,20 +9,32 @@ export const View = styled.div`
   width: 100%;
 `;
 
-export const OutterCard = styled.div`
+export const ServiceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   height: auto;
   width: 100%;
-`
+  overflow: auto;
+  flex-wrap: wrap;
+  padding: 20px;
 
-export const InnerCard = styled.div`
-  padding: 0 20px;
-`
+  @media (min-width: 230px) and (max-width: 768px) {
+    flex-direction: column;
+  };
+`;
+
+export const CardOutter = styled.div`
+  padding: 20px;
+`;
 
 export const Card = styled.div`
-  height: ${({ openCard }) => (openCard ? 200 : 90)}px;
-  width: 100%;
+  height: ${({ openCard }) => (openCard ? '250px' : '90px')};
+  width: 450px;
   display: flex;
   flex-direction: column;
+  margin: 0 15px;
   box-shadow: ${({ theme }) => theme.color.shadow};
   border-radius: 20px;
   margin-bottom: 35px;
@@ -30,6 +42,11 @@ export const Card = styled.div`
   transition: all 0.5s ease;
   background: ${({ theme }) => theme.color.background};
   box-shadow: ${({ theme }) => theme.color.shadow};
+
+  @media (min-width: 230px) and (max-width: 768px) {
+    width: 100%;
+    margin: 10px 0;
+  };
 `;
 
 export const CardTop = styled.div`
@@ -52,11 +69,17 @@ export const CardTop = styled.div`
 
 export const CardText = styled.div`
   display: ${({ openCard }) => (openCard ? 'flex' : 'none')};
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
+  font-size: 18px;
   height: 100%;
   width: 100%;
   padding: 5px 20px;
   margin-top: 10px;
   transition: all 1s ease;
+
+  @media (min-width: 230px) and (max-width: 768px) {
+    font-size: 16px;
+  };
 `;
 
 export const Container = styled.div`

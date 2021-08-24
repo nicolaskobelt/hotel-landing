@@ -15,7 +15,7 @@ export const ImageViewer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 180px;  
+  width: 180px; 
   margin: 10px;
   border-radius: 10px;
 `;

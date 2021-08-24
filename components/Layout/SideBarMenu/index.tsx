@@ -18,7 +18,7 @@ import {
 } from './styled';
 import Routes from '../../../configs/routes';
 
-const SideBarMenu = ({ openMenu }) => {
+const SideBarMenu = ({ openMenu, closeMenu }) => {
   const icons = {
     home: <BiHomeHeart size="30px" />,
     services: <BiDonateHeart size="30px" />,
@@ -39,14 +39,19 @@ const SideBarMenu = ({ openMenu }) => {
               activeClass="active"
               spy={true}
               smooth={true}
+              onClick={() => closeMenu(false)}
             >
               <Icon>{icons[route.icon]}</Icon>
               <Text>{route.name}</Text>
             </Item>
           ))}
-          <ItemHref href="https://www.instagram.com/oasis.natacionyspa/" target="_blank">
-              <Icon>{icons.spa}</Icon>
-              <Text>OASIS Spa Urbano</Text>
+          <ItemHref
+            href="https://www.instagram.com/oasis.natacionyspa/"
+            target="_blank"
+            onClick={() => closeMenu(false)}
+          >
+            <Icon>{icons.spa}</Icon>
+            <Text>OASIS Spa Urbano</Text>
           </ItemHref>
         </Items>
       </Sidebar>

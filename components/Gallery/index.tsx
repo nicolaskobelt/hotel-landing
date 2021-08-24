@@ -9,13 +9,13 @@ const ImageGallery = () => {
     <View id="photos">
       <Title>Galería de Fotos</Title>
       <ImageViewer>
-        {ImagesUri[Keys.breakfast].map(({ src, key }) => (
-          <Image key={key} src={src} alt={key} />
+        {ImagesUri[Keys.breakfast].map(({ src, key, id }) => (
+          <Image key={`${id}-${key}`} src={src} alt={key}/>
         ))}
       </ImageViewer>
       <ImageViewer>
-        {ImagesUri[Keys.pool].map(({ src, key }) => (
-          <Image key={key} src={src} alt={key} />
+        {ImagesUri[Keys.pool].map(({ src, key, id }) => (
+          <Image key={`${id}-${key}`} src={src} alt={key} />
         ))}
       </ImageViewer>
     </View>

@@ -5,10 +5,9 @@ import {
   View,
   Card,
   CardTop,
-  OutterCard,
-  InnerCard,
   CardText,
   Icon,
+  ServiceContainer,
 } from './styled';
 import { Title } from '../Base/Texts/styled';
 
@@ -33,41 +32,48 @@ const Services = ({ translate }) => {
     {
       id: 4,
       translate: 'spa',
-      icon: <BiSpa size="30px" />
+      icon: <BiSpa size="30px" />,
     },
     {
-      id: 4,
+      id: 5,
       translate: 'parking',
       icon: <FaParking size="25px" />,
     },
     {
-      id: 5,
+      id: 6,
       translate: 'more',
       icon: <BiPlusCircle size="25px" />,
     },
   ];
 
+  const openCard = (id: number) => {
+    if (id === openToggle) {
+      setOpenToggle(null);
+    } else {
+      setOpenToggle(id)
+    }
+  }
+
   return (
     <View id="services">
       <Title>{translate('services.title')}</Title>
-      {services.map((service, index) => (
-        <OutterCard key={service.id}>
-          <InnerCard>
-            <Card
-              onClick={() => setOpenToggle(index)}
-              openCard={openToggle === index}
-            >
-              <CardTop openCard={openToggle === index}>
-                <Icon>{service?.icon}</Icon>
-                {translate(`services.${service.translate}.title`)}
-              </CardTop>
-              <CardText openCard={openToggle === index}>
-                {translate(`services.${service.translate}.description`)}
-              </CardText>
-            </Card>
-          </InnerCard>
-        </OutterCard>
-      ))}
+      <ServiceContainer>
+        {services.map((service, index) => (
+          <Card
+            key={service.id}
+            onClick={() => openCard(index)}
+            openCard={openToggle === index}
+          >
+            <CardTop openCard={openToggle === index}>
+              <Icon>{service?.icon}</Icon>
+              {translate(`services.${service.translate}.title`)}
+            </CardTop>
+            <CardText openCard={openToggle === index}>
+              {translate(`services.${service.translate}.description`)}
+            </CardText>
+          </Card>
+        ))}
+      </ServiceContainer>
     </View>
   );
 };

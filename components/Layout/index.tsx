@@ -22,7 +22,7 @@ const NavBar = ({ children }) => {
         </Menu>
         <Logo src="../images/logo_color.svg" />
       </Header>
-      <SideBarMenu openMenu={menu} />
+      <SideBarMenu openMenu={menu} closeMenu={setMenu} />
       <View openMenu={menu} onClick={() => setMenu(false)}>{children}</View>
     </>
   );
