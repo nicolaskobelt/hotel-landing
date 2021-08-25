@@ -1,3 +1,4 @@
+import React, { useState } from 'react'; 
 import Contact from '../components/Contact';
 import Home from '../components/Home';
 import Footer from '../components/Layout/Footer';
@@ -9,7 +10,8 @@ import ImageGallery from '../components/Gallery';
 import Intro from '../components/Intro';
 
 const HomePage = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('common');
+
   return (
     <>
       <Home />
