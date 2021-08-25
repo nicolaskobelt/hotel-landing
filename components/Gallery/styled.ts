@@ -9,7 +9,7 @@ export const View = styled.div`
 
 export const ImageViewer = styled.div`
   display: flex;
-  width: 1000px;
+  width: 1200px;
   flex-direction: row;
   overflow: auto;
   flex-wrap: wrap;
@@ -22,7 +22,8 @@ export const ImageViewer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 180px; 
+  width: 250px; 
   margin: 5px;
+  height: ${({ isSafari }) => isSafari ? '180px' : 'auto'};
   border-radius: 2px 12px 12px 12px;
 `;

@@ -1,17 +1,17 @@
 import React from 'react';
-import { Input, View, ButtonsContainer, ContactButton, Map } from './styled';
+import { View, ButtonsContainer, ContactButton, Map } from './styled';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 import { FiMail } from 'react-icons/fi';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { Title } from '../Base/Texts/styled';
 
 const Contact = () => {
   const social = [
     {
-      icon: <AiOutlineWhatsApp size="40px" />,
-      name: 'whatsapp',
-      display: 'WhatsApp',
-      href: 'https://wa.me/5493546450727',
+      icon: <FaPhoneAlt size="40px" />,
+      name: 'phone',
+      display: 'Phone',
+      href: 'tel:+5403546420233'
     },
     {
       icon: <FiMail size="40px" />,
@@ -30,6 +30,12 @@ const Contact = () => {
       name: 'instagram',
       display: 'Instagram',
       href: 'https://www.instagram.com/hotelcasablancacba/',
+    },
+    {
+      icon: <AiOutlineWhatsApp size="40px" />,
+      name: 'whatsapp',
+      display: 'WhatsApp',
+      href: 'https://wa.me/5493546450727',
     },
   ];
 

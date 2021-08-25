@@ -7,13 +7,13 @@ export const View = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  top: ${({ position }) => position}px;
+  top: ${({ position }) =>  position}px;
   overflow: hidden;
-  left: 0;
-  background-color: ${({ theme }) => theme.color.backgroundModal};
+  left: ${({ open }) => open ? 0 : '-100%'};
+  background-color: ${({ theme }) => theme.color.backgroundTransparent};
   backdrop-filter: blur(5px);
   z-index: 11;
-  transition: all 1s ease;
+  transition: 500ms;
 `;
 
 export const Image = styled.img`
@@ -21,9 +21,9 @@ export const Image = styled.img`
   width: auto;
   height: 60%;
   z-index: 12;
-  border-radius: 20px;
-  cursor: pointer;
-
+  border-radius: 5px 20px 20px 20px;
+  cursor: pointer;  
+  transition: all 0.5s ease;
 
   @media (min-width: 230px) and (max-width: 768px) {
     width: 95%;

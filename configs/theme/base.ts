@@ -15,6 +15,7 @@ const base = {
     facebook: 'rgb(66 103 178)',
     instagram: 'rgb(193,53,132)',
     email: 'rgb(247,119,55)',
+    phone: 'rgb(0, 175, 219)',
     cards: {
       first: '#cecece',
       second: '#ffffff'

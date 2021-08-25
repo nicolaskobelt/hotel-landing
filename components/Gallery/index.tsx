@@ -3,6 +3,7 @@ import { View, Image, ImageViewer } from './styled';
 import ImagesUri from '../../constants/ImagesUri';
 import { Title } from '../Base/Texts/styled';
 import ImageModal from '../ImageModal';
+import { isSafari } from 'react-device-detect';
 
 const ImageGallery = () => {
   const [modal, setModal] = useState(false);
@@ -22,6 +23,7 @@ const ImageGallery = () => {
         <ImageViewer>
           {ImagesUri.map(({ src, key, id }) => (
             <Image
+              isSafari={isSafari}
               onClick={() => openModal(src)}
               key={`${id}-${key}`}
               src={src}
