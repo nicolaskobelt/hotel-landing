@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <View>
       <Title color={theme.color.textAlt}>Hotel Casablanca</Title>
-      <Direction href="https://g.page/hotelcasablancacba?share" target="_blank">El Nogal 33, Santa Rosa de Calamuchita, Córdoba, Argentina</Direction>
+      <Direction href="https://g.page/hotelcasablancacba?share" target="_blank">Santa Rosa de Calamuchita, Córdoba, Argentina.</Direction>
       <OtasContainer>
         {otas.map((ota) => (
           <Ota href={ota.href} target="_blank" key={ota.id}>

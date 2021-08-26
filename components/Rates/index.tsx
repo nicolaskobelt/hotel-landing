@@ -10,6 +10,7 @@ import {
   Spacer,
   RatesContainer,
   PeriodDisclaimer,
+  CurrencyTitle,
 } from './styled';
 import { Title } from '../Base/Texts/styled';
 import { useEffect } from 'react';
@@ -61,14 +62,13 @@ const Rates = ({ translate }) => {
   return (
     <View id="rates">
       <Title>{translate('rates.title')}</Title>
+      <CurrencyTitle>{translate('rates.currency')}</CurrencyTitle>
       <RatesContainer>
         <PeriodContainer>
           <Period>
-            {rates[0].length > 1
-              ? `${rates[0][0]} - ${rates[0][1]}`
-              : rates[0][0]}
+            {rates[0][1] ? `${rates[0][0]} - ${rates[0][1]}` : rates[0][0]}
           </Period>
-          {rates[0].length > 1 && (
+          {rates[0][2] && (
             <PeriodDetail>
               {rates[0][2]} al {rates[0][3]}
             </PeriodDetail>
@@ -84,11 +84,9 @@ const Rates = ({ translate }) => {
         <Spacer />
         <PeriodContainer>
           <Period>
-            {rates[4].length > 1
-              ? `${rates[4][0]} - ${rates[4][1]}`
-              : rates[4][0]}
+            {rates[4][1] ? `${rates[4][0]} - ${rates[4][1]}` : rates[4][0]}
           </Period>
-          {rates[4].length > 1 && (
+          {rates[4][2] && (
             <PeriodDetail>
               {rates[4][2]} al {rates[4][3]}
             </PeriodDetail>

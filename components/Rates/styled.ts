@@ -39,6 +39,7 @@ export const PeriodContainer = styled.div`
 export const Period = styled.p`
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
   font-family: ${({ theme }) => theme.fontFamily.primary};
   margin: 5px 0;
 `;
@@ -83,6 +84,12 @@ export const RoomPrice = styled.div`
   font-style: italic;
   font-family: ${({ theme }) => theme.fontFamily.secondary};
   margin: 0;
+`;
+
+export const CurrencyTitle = styled.p`
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
+  margin: -15px 0 25px 0;
 `;
 
 //Temporal

@@ -31,6 +31,7 @@
   "rates": {
     "title": "Tarifas",
     "loading": "Cargando tarifas...",
-    "unavailable": "Tarifas no disponibles por el momento."
+    "unavailable": "Tarifas no disponibles por el momento.",
+    "currency": "Moneda: Peso Argentino (ARS)"
   }
 }
