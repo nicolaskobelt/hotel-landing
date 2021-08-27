@@ -101,3 +101,12 @@ export const Spacer = styled.div`
   }
   
 `;
+
+export const Miscellaneous = styled.p`
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  margin: 5px 0;
+`;

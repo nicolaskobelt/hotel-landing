@@ -3,5 +3,6 @@
   "pool": "POOL",
   "rooms": "ROOMS",
   "spa": "SPA",
-  "parking": "PARKING"
+  "parking": "PARKING",
+  "lobby": "LOBBY"
 }

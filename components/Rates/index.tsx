@@ -11,6 +11,7 @@ import {
   RatesContainer,
   PeriodDisclaimer,
   CurrencyTitle,
+  Miscellaneous,
 } from './styled';
 import { Title } from '../Base/Texts/styled';
 import { useEffect } from 'react';
@@ -22,6 +23,7 @@ const Rates = ({ translate }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const path = `${process.env.NEXT_PUBLIC_API_URL}/rooms/rates`;
+  const underReview = true;
 
   useEffect(() => {
     const getRates = async () => {
@@ -44,7 +46,7 @@ const Rates = ({ translate }) => {
   if (loading) {
     return (
       <View>
-        <Title>{translate('rates.loading')}</Title>
+        <Miscellaneous>{translate('rates.loading')}</Miscellaneous>
         <Loader />
       </View>
     );
@@ -62,44 +64,50 @@ const Rates = ({ translate }) => {
   return (
     <View id="rates">
       <Title>{translate('rates.title')}</Title>
-      <CurrencyTitle>{translate('rates.currency')}</CurrencyTitle>
-      <RatesContainer>
-        <PeriodContainer>
-          <Period>
-            {rates[0][1] ? `${rates[0][0]} - ${rates[0][1]}` : rates[0][0]}
-          </Period>
-          {rates[0][2] && (
-            <PeriodDetail>
-              {rates[0][2]} al {rates[0][3]}
-            </PeriodDetail>
-          )}
-          {rates[1].map((item, index) => (
-            <Room key={index}>
-              <RoomName>{item}</RoomName>
-              <RoomPrice>{`$ ${rates[2][index]}.`}</RoomPrice>
-            </Room>
-          ))}
-          <PeriodDisclaimer>{rates[3][0]}</PeriodDisclaimer>
-        </PeriodContainer>
-        <Spacer />
-        <PeriodContainer>
-          <Period>
-            {rates[4][1] ? `${rates[4][0]} - ${rates[4][1]}` : rates[4][0]}
-          </Period>
-          {rates[4][2] && (
-            <PeriodDetail>
-              {rates[4][2]} al {rates[4][3]}
-            </PeriodDetail>
-          )}
-          {rates[5].map((item, index) => (
-            <Room key={index}>
-              <RoomName>{item}</RoomName>
-              <RoomPrice>{`$ ${rates[6][index]}.`}</RoomPrice>
-            </Room>
-          ))}
-          <PeriodDisclaimer>{rates[7][0]}</PeriodDisclaimer>
-        </PeriodContainer>
-      </RatesContainer>
+      {underReview ? (
+        <Miscellaneous>{translate('rates.underReview')}</Miscellaneous>
+      ) : (
+        <>
+          <CurrencyTitle>{translate('rates.currency')}</CurrencyTitle>
+          <RatesContainer>
+            <PeriodContainer>
+              <Period>
+                {rates[0][1] ? `${rates[0][0]} - ${rates[0][1]}` : rates[0][0]}
+              </Period>
+              {rates[0][2] && (
+                <PeriodDetail>
+                  {rates[0][2]} al {rates[0][3]}
+                </PeriodDetail>
+              )}
+              {rates[1].map((item, index) => (
+                <Room key={index}>
+                  <RoomName>{item}</RoomName>
+                  <RoomPrice>{`$ ${rates[2][index]}.`}</RoomPrice>
+                </Room>
+              ))}
+              <PeriodDisclaimer>{rates[3][0]}</PeriodDisclaimer>
+            </PeriodContainer>
+            <Spacer />
+            <PeriodContainer>
+              <Period>
+                {rates[4][1] ? `${rates[4][0]} - ${rates[4][1]}` : rates[4][0]}
+              </Period>
+              {rates[4][2] && (
+                <PeriodDetail>
+                  {rates[4][2]} al {rates[4][3]}
+                </PeriodDetail>
+              )}
+              {rates[5].map((item, index) => (
+                <Room key={index}>
+                  <RoomName>{item}</RoomName>
+                  <RoomPrice>{`$ ${rates[6][index]}.`}</RoomPrice>
+                </Room>
+              ))}
+              <PeriodDisclaimer>{rates[7][0]}</PeriodDisclaimer>
+            </PeriodContainer>
+          </RatesContainer>
+        </>
+      )}
     </View>
   );
 };
