@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title } from '../../Base/Texts/styled';
-import { Ota, OtasContainer, View, Direction } from './styled';
+import { Ota, OtasContainer, View, Direction, Copyright } from './styled';
 import { FaTripadvisor, FaGoogle } from 'react-icons/fa';
 import { useTheme } from '@emotion/react';
 
@@ -24,7 +24,9 @@ const Footer = () => {
   return (
     <View>
       <Title color={theme.color.textAlt}>Hotel Casablanca</Title>
-      <Direction href="https://g.page/hotelcasablancacba?share" target="_blank">Santa Rosa de Calamuchita, Córdoba, Argentina.</Direction>
+      <Direction href="https://g.page/hotelcasablancacba?share" target="_blank">
+        Santa Rosa de Calamuchita, Córdoba, Argentina.
+      </Direction>
       <OtasContainer>
         {otas.map((ota) => (
           <Ota href={ota.href} target="_blank" key={ota.id}>
@@ -32,6 +34,10 @@ const Footer = () => {
           </Ota>
         ))}
       </OtasContainer>
+      <Copyright>
+        © {new Date().getFullYear()} Hotel Casablanca. Todos los derechos
+        reservados.
+      </Copyright>
     </View>
   );
 };

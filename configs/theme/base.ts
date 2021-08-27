@@ -4,6 +4,7 @@ const base = {
     backgroundTransparent: 'rgba(247, 247, 247, 0.8)',
     backgroundModal: 'rgba(18, 18, 18, 0.5)',
     footerBackground: 'rgb(46, 46, 46)',
+    pureBlack: 'rgba(18, 18, 18)',
     text: 'rgb(33, 33, 33)',
     textAlt: 'rgb(247, 247, 247)',
     shadow: '5px 5px 10px #b6b6b6, -5px -5px 10px #ffffff',

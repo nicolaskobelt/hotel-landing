@@ -39,3 +39,16 @@ export const Direction = styled.a`
   font-family: ${({ theme }) => theme.fontFamily.secondary};
   margin-bottom: 20px;
 `;
+
+export const Copyright = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  background-color: ${({ theme }) => theme.color.pureBlack};
+  text-align: center;
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fontFamily.secondary};
+  color: ${({ theme }) => theme.color.textAlt};
+`
