@@ -17,6 +17,7 @@ import {
   ItemHref,
 } from './styled';
 import Routes from '../../../configs/routes';
+import { logEvent } from '../../../utils/Analytics';
 
 const SideBarMenu = ({ openMenu, closeMenu }) => {
   const icons = {
@@ -27,6 +28,11 @@ const SideBarMenu = ({ openMenu, closeMenu }) => {
     rates: <BiDollarCircle size="30px" />,
     spa: <BiSpa size="30px" />,
   };
+
+  const handleClick = (route: string) => {
+    closeMenu(false);
+    logEvent(route, 'click');
+  }
 
   return (
     <SideBarContainer>
@@ -39,7 +45,7 @@ const SideBarMenu = ({ openMenu, closeMenu }) => {
               activeClass="active"
               spy={true}
               smooth={true}
-              onClick={() => closeMenu(false)}
+              onClick={() => handleClick(route.id)}
             >
               <Icon>{icons[route.icon]}</Icon>
               <Text>{route.name}</Text>
@@ -48,7 +54,7 @@ const SideBarMenu = ({ openMenu, closeMenu }) => {
           <ItemHref
             href="https://www.instagram.com/oasis.natacionyspa/"
             target="_blank"
-            onClick={() => closeMenu(false)}
+            onClick={() => handleClick('spa')}
           >
             <Icon>{icons.spa}</Icon>
             <Text>OASIS Spa Urbano</Text>

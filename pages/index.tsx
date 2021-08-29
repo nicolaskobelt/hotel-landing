@@ -8,9 +8,17 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Rates from '../components/Rates';
 import ImageGallery from '../components/Gallery';
 import Intro from '../components/Intro';
+import { initGA, logSection } from '../utils/Analytics';
 
 const HomePage = () => {
   const { t } = useTranslation('common');
+  const [gaInit, setGaInit] = useState(false);
+
+  if (!gaInit) {
+    initGA();
+    setGaInit(true);
+    logSection('home');
+  }
 
   return (
     <>

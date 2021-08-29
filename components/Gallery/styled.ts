@@ -4,6 +4,7 @@ export const View = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow-x: scroll;
 `;
 
@@ -13,11 +14,13 @@ export const ImageViewer = styled.div`
   flex-direction: row;
   overflow: auto;
   flex-wrap: wrap;
+  margin-left: 150px;
 
   @media (min-width: 230px) and (max-width: 768px) {
     width: 100%;
     flex-wrap: nowrap;
-    padding: 0 20px
+    padding: 0 20px;
+    margin-left: 0;
   };
 `;
 
