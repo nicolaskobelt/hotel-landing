@@ -3,7 +3,7 @@ import Keys from './Keys.json';
 const ImagesUri = [
   {
     id: 1,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/breakfast_1.jpg?alt=media&token=ce40419c-88d3-4214-93cb-aabcece48400',
+    src: 'breakfast_1.jpg',
     key: Keys.breakfast,
     width: 3,
     height: 2,
@@ -11,7 +11,7 @@ const ImagesUri = [
   },
   {
     id: 2,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/breakfast_2.jpg?alt=media&token=805e8279-bfe0-4647-9af8-e0a9b16643e1',
+    src: 'breakfast_2.jpg',
     key: Keys.breakfast,
     width: 3,
     height: 2,
@@ -19,7 +19,7 @@ const ImagesUri = [
   },
   {
     id: 3,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/breakfast_3.jpg?alt=media&token=4dc6bafd-9de0-4a52-8e62-4512e440e4fc',
+    src: 'breakfast_3.jpg',
     key: Keys.breakfast,
     width: 3,
     height: 2,
@@ -27,7 +27,7 @@ const ImagesUri = [
   },
   {
     id: 4,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/breakfast_4.jpg?alt=media&token=9c77c9b0-d1dd-4df9-9177-9717bdfbdd65',
+    src: 'breakfast_4.jpg',
     key: Keys.breakfast,
     width: 3,
     height: 2,
@@ -35,7 +35,7 @@ const ImagesUri = [
   },
   {
     id: 5,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/breakfast_5.jpg?alt=media&token=c5860bcd-1940-4c4d-bbd4-e3e152b316f4',
+    src: 'breakfast_5.jpg',
     key: Keys.breakfast,
     width: 3,
     height: 2,
@@ -43,7 +43,7 @@ const ImagesUri = [
   },
   {
     id: 11,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/pool_1.jpg?alt=media&token=e0493668-32e1-40c8-adde-c4927a8a2356',
+    src: 'pool_1.jpg',
     key: Keys.pool,
     width: 3,
     height: 2,
@@ -51,7 +51,7 @@ const ImagesUri = [
   },
   {
     id: 12,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/pool_2.jpg?alt=media&token=90c10c0f-edbe-4f62-89ad-45f3394dc5be',
+    src: 'pool_2.jpg',
     key: Keys.pool,
     width: 3,
     height: 2,
@@ -59,7 +59,7 @@ const ImagesUri = [
   },
   {
     id: 13,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/pool_3.jpg?alt=media&token=c232d998-949d-4ba1-8105-a6aed7039e92',
+    src: 'pool_3.jpg',
     key: Keys.pool,
     width: 3,
     height: 2,
@@ -67,7 +67,7 @@ const ImagesUri = [
   },
   {
     id: 14,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/pool_4.jpg?alt=media&token=5df49278-67de-4f49-ac49-2f3cda462dd2',
+    src: 'pool_4.jpg',
     key: Keys.pool,
     width: 3,
     height: 2,
@@ -75,7 +75,7 @@ const ImagesUri = [
   },
   {
     id: 15,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/pool_5.jpg?alt=media&token=9be72923-8122-4b82-b18a-4a003c1de0c4',
+    src: 'pool_5.jpg',
     key: Keys.pool,
     width: 3,
     height: 2,
@@ -83,7 +83,15 @@ const ImagesUri = [
   },
   {
     id: 16,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/front_1.jpg?alt=media&token=fcee42fd-a220-48c3-a887-3d38d72bd772',
+    src: 'front_1.jpg',
+    key: Keys.lobby,
+    width: 3,
+    height: 2,
+    alt: '',
+  },
+  {
+    id: 23,
+    src: 'front_2.jpg',
     key: Keys.lobby,
     width: 3,
     height: 2,
@@ -91,7 +99,7 @@ const ImagesUri = [
   },
   {
     id: 17,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/lobby_1.jpg?alt=media&token=ee71dd6c-f252-4059-92eb-4dff67fa247d',
+    src: 'lobby_1.jpg',
     key: Keys.lobby,
     width: 3,
     height: 2,
@@ -99,7 +107,7 @@ const ImagesUri = [
   },
   {
     id: 18,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/lobby_2.jpg?alt=media&token=988d55fc-7824-454f-9807-b417f2fa7d8e',
+    src: 'lobby_2.jpg',
     key: Keys.lobby,
     width: 3,
     height: 2,
@@ -107,7 +115,7 @@ const ImagesUri = [
   },
   {
     id: 19,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/room_1.jpg?alt=media&token=5e4a42cd-ec05-4d1f-9587-9d6bc24acb83',
+    src: 'room_1.jpg',
     key: Keys.rooms,
     width: 3,
     height: 2,
@@ -115,7 +123,7 @@ const ImagesUri = [
   },
   {
     id: 20,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/room_2.jpg?alt=media&token=f10ef5de-0bb7-466e-811d-9c81cae1e44c',
+    src: 'room_2.jpg',
     key: Keys.rooms,
     width: 3,
     height: 2,
@@ -123,7 +131,7 @@ const ImagesUri = [
   },
   {
     id: 21,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/room_3.jpg?alt=media&token=94273f18-7cff-4153-a773-4b025c942d73',
+    src: 'room_3.jpg',
     key: Keys.rooms,
     width: 3,
     height: 2,
@@ -131,7 +139,15 @@ const ImagesUri = [
   },
   {
     id: 22,
-    src: 'https://firebasestorage.googleapis.com/v0/b/hotel-casablanca.appspot.com/o/room_4.jpg?alt=media&token=b33402a2-827a-4b6e-ab73-d1a9bdd716f8',
+    src: 'room_4.jpg',
+    key: Keys.rooms,
+    width: 3,
+    height: 2,
+    alt: '',
+  },
+  {
+    id: 24,
+    src: 'room_5.jpg',
     key: Keys.rooms,
     width: 3,
     height: 2,

@@ -18,6 +18,10 @@ const ImageGallery = () => {
     setWindowPos(window.scrollY);
   };
 
+  const getSrc = (id) => {
+    return `https://casablanca-photos.sfo3.digitaloceanspaces.com/${id}`
+  }
+
   return (
     <>
       <View id="photos">
@@ -26,9 +30,9 @@ const ImageGallery = () => {
           {ImagesUri.map(({ src, key, id, alt }) => (
             <Image
               isSafari={isSafari}
-              onClick={() => openModal(src, alt)}
+              onClick={() => openModal(getSrc(src), alt)}
               key={`${id}-${key}`}
-              src={src}
+              src={getSrc(src)}
               alt={key}
             />
           ))}
