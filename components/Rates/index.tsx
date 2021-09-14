@@ -23,7 +23,7 @@ const Rates = ({ translate }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const path = `${process.env.NEXT_PUBLIC_API_URL}/rooms/rates`;
-  const underReview = true;
+  const underReview = false;
 
   useEffect(() => {
     const getRates = async () => {
