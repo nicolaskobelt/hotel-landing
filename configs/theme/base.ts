@@ -1,7 +1,7 @@
 const base = {
   color: {
     background: '#f2f2f2',
-    backgroundTransparent: 'rgba(247, 247, 247, 0.8)',
+    backgroundTransparent: 'rgba(247, 247, 247, 0.6)',
     backgroundModal: 'rgba(18, 18, 18, 0.5)',
     footerBackground: 'rgb(46, 46, 46)',
     pureBlack: 'rgba(18, 18, 18)',

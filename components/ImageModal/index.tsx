@@ -1,12 +1,22 @@
 import React from 'react';
-import { View, Image } from './styled';
+import { Image, ImageOuter } from './styled';
+import Blur from '../Misc/Blur';
 
-const ImageModal = ({ position, uri, alt, display, closeModal }) => {
+interface ImageModalProps {
+  uri: string;
+  alt: string;
+  position: number;
+  closeModal: (state: boolean) => void;
+}
 
+const ImageModal: React.FC<ImageModalProps> = ({ uri, alt, closeModal, position }) => {
   return (
-    <View onClick={() => closeModal(false)} open={display} position={position}>
-      <Image src={uri} alt={alt} />
-    </View>
+    <>
+      <ImageOuter position={position} onClick={() => closeModal(false)}>
+        <Image src={uri} alt={alt} />
+      </ImageOuter>
+      <Blur />
+    </>
   );
 };
 

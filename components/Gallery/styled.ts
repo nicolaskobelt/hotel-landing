@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+interface ImageProps {
+  isSafari: boolean;
+}
+
 export const View = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,7 +28,7 @@ export const ImageViewer = styled.div`
   };
 `;
 
-export const Image = styled.img`
+export const Image = styled.img<ImageProps>`
   width: 250px; 
   margin: 5px;
   height: ${({ isSafari }) => isSafari ? '180px' : 'auto'};

@@ -18,9 +18,9 @@ const ImageGallery = () => {
     setWindowPos(window.scrollY);
   };
 
-  const getSrc = (id) => {
-    return `https://casablanca-photos.sfo3.digitaloceanspaces.com/${id}`
-  }
+  const getSrc = (id: string) => {
+    return `https://casablanca-photos.sfo3.digitaloceanspaces.com/${id}`;
+  };
 
   return (
     <>
@@ -38,13 +38,14 @@ const ImageGallery = () => {
           ))}
         </ImageViewer>
       </View>
-      <ImageModal
-        position={windowPos}
-        display={modal}
-        uri={uri}
-        alt={alt}
-        closeModal={setModal}
-      />
+      {modal && (
+        <ImageModal
+          position={windowPos}
+          uri={uri}
+          alt={alt}
+          closeModal={setModal}
+        />
+      )}
     </>
   );
 };
